@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>BetaChat</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +11,13 @@
   </head>
 
   <body>
-  <%= render 'layouts/navigation_top' %>
-  <%= yield %>
+    <div class="ui inverted small menu">
+      <div class="ui container">
+        <%= render 'layouts/navigation_top' %>
+      </div>
+    </div>
+    <div class="ui container">
+      <%= yield %>
+    </div>
   </body>
 </html>
