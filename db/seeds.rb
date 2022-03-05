@@ -9,3 +9,7 @@
 15.times do |n|
   User.create(username: "User##{n}", password: "password##{n}")
 end
+
+50.times do |n|
+  Message.create(body: "This is message ##{n}", user: User.find(User.pluck(:id).sample))
+end
